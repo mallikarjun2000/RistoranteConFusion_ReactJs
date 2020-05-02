@@ -9,6 +9,7 @@ class DishDetail extends React.Component{
 
     render(){
         const dish = this.props.dish;
+        if(dish!=null){
         return(
             <div className="row">
                 <div className="col-12 col-sm-5">
@@ -28,14 +29,16 @@ class DishDetail extends React.Component{
                                 return(
                                     <li key={comment.id} className="list-unstyled ml-5">
                                         <p>{comment.comment}</p>
-                                        <p>--{comment.author},{comment.date}</p>
+                                        <p>--{comment.author},{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                                     </li>
                                 )
                             })}
                         </div>
                 </div>
             </div>
-        );
+        );}
+        else
+        return <div></div>
     }
 }
 
