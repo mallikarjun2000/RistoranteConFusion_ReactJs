@@ -1,9 +1,16 @@
 import React from 'react';
 import './App.css';
+import { DISHES } from './shared/dishes';
 import Menu from './Components/MenuComponent';
 import { Navbar, NavbarBrand } from 'reactstrap';
 
-function App() {
+class App extends React.Component {
+
+  constructor(props){
+    super(props)
+  }
+
+  render(){
   return (
     <div>
       <Navbar dark color="primary">
@@ -11,9 +18,10 @@ function App() {
           <NavbarBrand href='/'>Ristorante Con Fusion</NavbarBrand>
         </div>
       </Navbar>
-      <Menu/>
+      <Menu dishes={DISHES}/>
     </div>
   );
+  }
 }
 
 export default App;
