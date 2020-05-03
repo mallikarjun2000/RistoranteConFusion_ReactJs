@@ -1,8 +1,10 @@
+import bu from '../Components/assets/buffet.png';
+
 export const PROMOTIONS = [
     {
       id: 0,
       name: 'Weekend Grand Buffet',
-      image: '/assets/images/buffet.png',
+      image: bu,
       label: 'New',
       price: '19.99',
       featured: true,
