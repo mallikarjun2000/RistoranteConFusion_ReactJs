@@ -1,6 +1,7 @@
 import React from'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import Logo from '../Components/assets/logo.png';
 
 class Header extends React.Component{
 
@@ -27,7 +28,7 @@ class Header extends React.Component{
                 <div className="container">
                     <NavbarToggler onClick={this.toggleNav}/>
                 <NavbarBrand className="mr-auto" href='/'>
-                    <img src="../assets/logo.png" height="30" width="41"
+                    <img src={Logo} height="30" width="41"
                     alt="Ristorante Con Fusion"/>
                 </NavbarBrand>
                 <Collapse isOpen={this.state.isNavOpen} navbar>

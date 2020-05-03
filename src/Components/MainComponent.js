@@ -54,7 +54,7 @@ class Main extends React.Component {
         <Route exact path='/menu' component={()=><Menu dishes={this.state.dishes}/>} />
         <Route exact path='/contactus' component={Contact}/>
         <Route path='/menu/:dishId' component={DishWithId}/>
-        <Route exact path='/aboutus' component={About} leaders={this.state.leaders}/>
+        <Route exact path='/aboutus' component={()=> <About leaders={this.state.leaders}/>}/>
         <Redirect to='/home'/>
       </Switch>
       <Footer/>
